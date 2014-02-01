@@ -1,10 +1,19 @@
 #!/usr/bin/env node
-var request = require('request'),
-    argv    = require('optimist')
+var request  = require('request'),
+    optimist = require('optimist')
               .default('url', 'http://localhost:8053')
+              .describe('url', 'DDNS server rul')
               .default('hostname', 'localhost')
+              .describe('hostname', 'the machine\'s hostname')
               .default('interval', 60 * 60)
-              .argv;
+              .describe('interval', 'update intarval');
+
+var argv = optimist.argv;
+
+if (argv.help) {
+	optimist.showHelp();
+	process.exit(0);
+}
 
 (function ddnsUpdate() {
 	request({
