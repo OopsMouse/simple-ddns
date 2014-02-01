@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+var request = require('request'),
+    argv    = require('optimist')
+              .default('url', 'http://localhost:8053')
+              .default('hostname', 'localhost')
+              .default('interval', 60 * 60)
+              .argv;
+
+(function ddnsUpdate() {
+	request({
+		url: argv.url,
+		form: {
+			hostname: argv.hostname
+		}
+	});
+	setTimeout(ddnsUpdate, argv.interval);
+})();
