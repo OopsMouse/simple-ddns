@@ -9,6 +9,10 @@
     "type": "git",
     "url": "https://github.com/OopsMouse/simple-ddns.git"
   },
+  "bin": {
+    "ddns-server": "./bin/ddns-server",
+    "ddns-client": "./bin/ddns-client"
+  },
   "author": "OopsMouse",
   "license": "MIT",
   "gitHead": "54d34f7be343c572760d3240fe17e1f9368bd6b3",
