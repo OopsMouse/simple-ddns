@@ -6,7 +6,7 @@ Simple Dynamic DNS Server & Client.
 
 If you deploy ddns server, you must install dnsmasq. Please see [this](http://www.thekelleys.org.uk/dnsmasq/doc.html) for the details.
 
-	$ [sudo] npm install -g git@github.com:OopsMouse/simple-ddns.git
+	$ [sudo] npm install -g https://github.com/OopsMouse/simple-ddns/tarball/master
 
 ##Usage
 
